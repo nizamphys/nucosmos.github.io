@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="max-w-4xl mx-auto text-center px-4">
 
         <Image
-          src="/"
+          src="/ucscpic.jpeg"
           alt="Mohammad Nizam"
           width={160}
           height={160}
@@ -22,7 +22,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           className="text-4xl font-bold mb-4"
         >
-          Mohammad Nizam
+          Mohammad Nizams
         </motion.h2>
 
         <p className="text-lg mb-6">
