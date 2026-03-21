@@ -10,11 +10,11 @@ export default function Hero() {
       <div className="max-w-4xl mx-auto text-center px-4">
 
         <Image
-          src="/ucscpic.png"
+          src="/"
           alt="Mohammad Nizam"
-          className="rounded-full mx-auto mb-6 border-4 border-white w-40 h-40"
-          
-      
+          width={160}
+          height={160}
+          className="rounded-full mx-auto mb-6 border-4 border-white"
         />
 
         <motion.h2
