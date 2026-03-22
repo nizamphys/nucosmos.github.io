@@ -1,37 +1,55 @@
+// components/Hero.tsx (Client Component)
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
     <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20">
-      <div className="max-w-4xl mx-auto text-center px-4">
+      <div className="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
 
-        <Image
-          src="/ucscpic.jpeg"
-          alt="Mohammad Nizam"
-          width={160}
-          height={160}
-          className="rounded-full mx-auto mb-6 border-4 border-white"
-        />
+        {/* Profile Image */}
+        <div className="flex-shrink-0">
+          <img
+            src="/ucscpic.jpeg"
+            alt="Mohammad Nizam"
+            className="w-40 h-40 rounded-full border-4 border-white object-cover shadow-lg"
+          />
+        </div>
 
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-4xl font-bold mb-4"
-        >
-          Mohammad Nizams
-        </motion.h2>
+        {/* Text Content */}
+        <div className="text-center md:text-left">
+          <h1 className="text-4xl md:text-5xl font-bold mb-2">
+            Mohammad Nizam
+          </h1>
+          <p className="text-xl mb-2">
+            Particle Physicist
+          </p>
+          <p className="text-lg mb-4">
+            Neutrino Physics • Detector Simulation • Data Acquisition Systems
+          </p>
 
-        <p className="text-lg mb-6">
-          Particle physicist specializing in neutrino physics and detector simulations.
-        </p>
+          <p className="text-base max-w-2xl mb-6">
+            I conduct research in neutrino oscillations, detector development, and high‑energy physics simulations, focusing on bridging theoretical models with experimental detector systems and real‑time data processing architectures.
+          </p>
 
-        <Button asChild>
-          <a href="#contact">Get in Touch</a>
-        </Button>
+          <div className="flex flex-wrap justify-center md:justify-start gap-4">
+            <a
+              href="#publications"
+              className="bg-white text-blue-700 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition"
+            >
+              Publications
+            </a>
+            <a
+              href="#contact"
+              className="border border-white px-4 py-2 rounded-lg font-semibold hover:bg-white hover:text-blue-700 transition"
+            >
+              Contact
+            </a>
+          </div>
+        </div>
+
       </div>
     </section>
   );
